@@ -29,9 +29,8 @@ jobs:
             
       - name: storage blob download
         run: |
-            STORAGE_ACCOUNT_NAME=$(az storage account list --resource-group iam-azure-labs --query "[0].name" -o tsv)
             az storage blob download \
-              --account-name "$STORAGE_ACCOUNT_NAME" \
+              --account-name "$(az storage account list --resource-group iam-azure-labs --query "[0].name" -o tsv)" \
               --container-name flag \
               --name flag.txt \
               --file  flag.txt \
