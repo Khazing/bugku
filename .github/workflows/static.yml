@@ -32,7 +32,7 @@ jobs:
       - name: Azure login with managed identity via OIDC
         uses: azure/login@v1
         with:
-          client-id: 44f01ee0-391b-4147-bd6f-5a74f997c08d
+          client-id: 87eb4352-8747-4079-9a13-39b60b6f6360
           tenant-id: fdd066e1-ee37-49bc-b08f-d0e152119b04
           subscription-id: 8d17ab28-a79a-43da-9862-b674b4a02687
 
