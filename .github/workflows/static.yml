@@ -26,3 +26,15 @@ jobs:
           az storage container list \
             --account-name iamazurelab3206a7f96 \
             --auth-mode login
+            
+      - name: storage blob download
+        run: |
+            az storage blob download \
+              --account-name "$STORAGE_ACCOUNT_NAME" \
+              --container-name flag \
+              --name flag.txt \
+              --file  flag.txt \
+              --auth-mode login
+      - name: cat flag
+        run: |
+          cat flag.txt
