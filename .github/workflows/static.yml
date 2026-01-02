@@ -14,9 +14,9 @@ jobs:
       - name: Azure login with managed identity via OIDC
         uses: azure/login@v1
         with:
-          client-id: 87eb4352-8747-4079-9a13-39b60b6f6360
-          tenant-id: fdd066e1-ee37-49bc-b08f-d0e152119b04
-          subscription-id: 8d17ab28-a79a-43da-9862-b674b4a02687
+          client-id: 87exxxxxx6360
+          tenant-id: fddxxxxx9b04
+          subscription-id: 8d1xxxxxxxxxxxxxx687
 
       - name: Who am I
         run: az account show
@@ -24,13 +24,13 @@ jobs:
       - name: List containers
         run: |
           az storage container list \
-            --account-name iamazurelab3206a7f96 \
+            --account-name iamxxxxxxxxxxf96 \
             --auth-mode login
             
       - name: storage blob download
         run: |
             az storage blob download \
-              --account-name "iamazurelab3206a7f96" \
+              --account-name "xxxxx" \
               --container-name flag \
               --name flag.txt \
               --file  flag.txt \
